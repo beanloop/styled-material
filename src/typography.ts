@@ -40,7 +40,7 @@ export const Title = styled.h3`
 `
 
 export const Subhead = styled.h4`
-  margin: 0 8px;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -48,7 +48,7 @@ export const Subhead = styled.h4`
 `
 
 export const Subhead2 = styled.h4`
-  margin: 0 8px;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
