@@ -36,7 +36,6 @@ export const Title = styled.h3`
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.02em;
 `
 
 export const Subhead = styled.h4`
@@ -44,7 +43,6 @@ export const Subhead = styled.h4`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.04em;
 `
 
 export const Subhead2 = styled.h4`
@@ -52,26 +50,22 @@ export const Subhead2 = styled.h4`
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: 0.04em;
 `
 
 export const Body = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0;
 `
 
 export const Body2 = styled.p`
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0;
 `
 
 export const Caption = styled.span`
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 0;
 `

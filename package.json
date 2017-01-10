@@ -1,6 +1,6 @@
 {
   "name": "styled-material",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Material variables and mixins for styled-components",
   "devDependencies": {
     "babel-eslint": "^6.1.0",
