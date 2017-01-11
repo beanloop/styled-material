@@ -3,7 +3,8 @@
 ## Installation
 
 ```sh
-npm install styled-material
+npm install -S styled-material
+yarn add styled-material
 ```
 
 ## Usage

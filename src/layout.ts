@@ -1,4 +1,7 @@
-export const Column: StatelessComponent<{
+import {ComponentClass, HTMLProps, StatelessComponent} from 'react'
+import styled, {StyledFunction, StyledInterface} from 'styled-components'
+
+export const Column: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
   style?: any
   horizontal?: 'center'|'flex-start'|'flex-end'
   vertical?: 'center'|'flex-start'|'flex-end'
@@ -6,16 +9,16 @@ export const Column: StatelessComponent<{
   reverse?: boolean
 }> = styled.div`
   display: flex;
-  flex-direction: ${({reverse}) => reverse ? 'column-reverse' : 'column'};
-  align-items: ${({horizontal}) => horizontal || 'initial'};
-  align-self: ${({self}) => self || 'initial'};
-  justify-content: ${({vertical}) => vertical || 'initial'};
+  flex-direction: ${({reverse}: any) => reverse ? 'column-reverse' : 'column'};
+  align-items: ${({horizontal}: any) => horizontal || 'initial'};
+  align-self: ${({self}: any) => self || 'initial'};
+  justify-content: ${({vertical}: any) => vertical || 'initial'};
 
   box-sizing: border-box;
   width: 100%;
 `
 
-export const Row: StatelessComponent<{
+export const Row: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
   style?: any
   horizontal?: 'center'|'flex-start'|'flex-end'
   vertical?: 'center'|'flex-start'|'flex-end'|'space-around'
@@ -23,10 +26,10 @@ export const Row: StatelessComponent<{
   reverse?: boolean
 }> = styled.div`
   display: flex;
-  flex-direction: ${({reverse}) => reverse ? 'row-reverse' : 'row'};
-  align-items: ${({vertical}) => vertical || 'initial'};
-  align-self: ${({self}) => self || 'initial'};
-  justify-content: ${({horizontal}) => horizontal || 'initial'};
+  flex-direction: ${({reverse}: any) => reverse ? 'row-reverse' : 'row'};
+  align-items: ${({vertical}: any) => vertical || 'initial'};
+  align-self: ${({self}: any) => self || 'initial'};
+  justify-content: ${({horizontal}: any) => horizontal || 'initial'};
 
   box-sizing: border-box;
 `

@@ -1,14 +1,11 @@
 {
   "name": "styled-material",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Material variables and mixins for styled-components",
   "devDependencies": {
-    "babel-eslint": "^6.1.0",
-    "eslint": "^2.9.0",
-    "eslint-config-beanloop": "^0.1.0",
-    "stylelint": "^6.7.1",
-    "stylelint-config-beanloop": "^0.1.1",
-    "tscomp": "^0.5.0"
+    "tscomp": "^0.7.5",
+    "tslint": "^4.3.1",
+    "tslint-config-beanloop": "^0.1.0"
   },
   "scripts": {
     "lint": "stylelint src/**/*",
@@ -31,6 +28,7 @@
   },
   "homepage": "https://github.com/beanloop/styled-material#readme",
   "dependencies": {
+    "@types/react": "^15.0.0",
     "styled-components": "^1.1.1"
   }
 }
