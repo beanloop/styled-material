@@ -2,7 +2,6 @@ import {ComponentClass, HTMLProps, StatelessComponent} from 'react'
 import styled, {StyledFunction, StyledInterface} from 'styled-components'
 
 export const Column: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
-  style?: any
   horizontal?: 'center'|'flex-start'|'flex-end'
   vertical?: 'center'|'flex-start'|'flex-end'
   self?: 'center'|'flex-start'|'flex-end'|'stretch'
@@ -19,7 +18,6 @@ export const Column: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
 `
 
 export const Row: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
-  style?: any
   horizontal?: 'center'|'flex-start'|'flex-end'
   vertical?: 'center'|'flex-start'|'flex-end'|'space-around'
   self?: 'center'|'flex-start'|'flex-end'|'stretch'
