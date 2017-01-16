@@ -2,8 +2,8 @@ import {ComponentClass, HTMLProps, StatelessComponent} from 'react'
 import styled, {StyledFunction, StyledInterface} from 'styled-components'
 
 export const Column: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
-  horizontal?: 'center'|'flex-start'|'flex-end'
-  vertical?: 'center'|'flex-start'|'flex-end'
+  horizontal?: 'center'|'flex-start'|'flex-end'|'space-between'|'space-around'|'stretch'
+  vertical?: 'center'|'flex-start'|'flex-end'|'space-between'|'space-around'
   self?: 'center'|'flex-start'|'flex-end'|'stretch'
   reverse?: boolean
 }> = styled.div`
@@ -18,11 +18,11 @@ export const Column: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
 `
 
 export const Row: React.ComponentClass<React.HTMLProps<HTMLDivElement> & {
-  horizontal?: 'center'|'flex-start'|'flex-end'
-  vertical?: 'center'|'flex-start'|'flex-end'|'space-around'
-  self?: 'center'|'flex-start'|'flex-end'|'stretch'
+  horizontal?: 'center'|'flex-start'|'flex-end'|'space-between'|'space-around'
+  vertical?: 'center'|'flex-start'|'flex-end'|'space-between'|'space-around'|'stretch'
+  self?: 'center'|'flex-start'| 'flex-end'| 'stretch'
   reverse?: boolean
-}> = styled.div`
+} > = styled.div`
   display: flex;
   flex-direction: ${({reverse}: any) => reverse ? 'row-reverse' : 'row'};
   align-items: ${({vertical}: any) => vertical || 'initial'};
