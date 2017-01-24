@@ -294,8 +294,10 @@ export type Options = {
 }
 
 export function normalizeColor(
-  name: Color = 0, {colors = colorOrder, level = 400, opacity = 1}: Options = {},
+  name: Color = 0, options: Options = {},
 ) {
+  const {colors = colorOrder, level = 400, opacity = 1} = options
+
   if (typeof name === 'number') {
     name = colors[name % colors.length]
   }
