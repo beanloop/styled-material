@@ -1,28 +1,6 @@
 const colorOrder = ['teal', 'cyan', 'pink', 'amber', 'indigo', 'light-green', 'brown', 'orange',
                     'deep-purple', 'green', 'blue', 'red', 'yellow', 'green', 'purple']
 
-export function normalizeColor(
-  name: any = 0, {colors = colorOrder, level = 400, opacity = 1} = {},
-) {
-  if (typeof name === 'number') {
-    name = colors[name % colors.length]
-  }
-
-  let color: string = materialColors[`${name}-${level}`]
-      || materialColors[name]
-      || name
-
-  if (opacity < 1 && color.startsWith('#')) {
-    const r = parseInt(color.substring(1, 3), 16)
-    const g = parseInt(color.substring(3, 5), 16)
-    const b = parseInt(color.substring(5, 7), 16)
-
-    color = `rgba(${r}, ${g}, ${b}, ${opacity})`
-  }
-
-  return color
-}
-
 export const materialColors = {
   'red-50': '#ffebee',
   'red-100': '#ffcdd2',
@@ -306,4 +284,33 @@ export const materialColors = {
   'darker-white': 'rgba(255, 255, 255, 0.87)',
   'dark-white': 'rgba(255, 255, 255, 0.7)',
   'light-white': 'rgba(255, 255, 255, 0.54)',
+}
+
+export type Color = number|string
+export type Options = {
+  colors?: Array<string>
+  level?: 50|100|200|300|400|500|600|700|800|900
+  opacity?: number
+}
+
+export function normalizeColor(
+  name: Color = 0, {colors = colorOrder, level = 400, opacity = 1}: Options = {},
+) {
+  if (typeof name === 'number') {
+    name = colors[name % colors.length]
+  }
+
+  let color: string = materialColors[`${name}-${level}`]
+      || materialColors[name]
+      || name
+
+  if (opacity < 1 && color.startsWith('#')) {
+    const r = parseInt(color.substring(1, 3), 16)
+    const g = parseInt(color.substring(3, 5), 16)
+    const b = parseInt(color.substring(5, 7), 16)
+
+    color = `rgba(${r}, ${g}, ${b}, ${opacity})`
+  }
+
+  return color
 }

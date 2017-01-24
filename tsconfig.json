@@ -4,7 +4,8 @@
     "declaration": true,
     "target": "es2015",
     "lib": ["es2015", "es2016", "es2017", "dom"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*",

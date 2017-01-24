@@ -1,6 +1,6 @@
 {
   "name": "styled-material",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Material variables and mixins for styled-components",
   "devDependencies": {
     "tscomp": "^0.7.5",
@@ -18,8 +18,8 @@
     "url": "git+https://github.com/beanloop/styled-material.git"
   },
   "keywords": [
-    "stylelint",
-    "stylelint-config"
+    "material",
+    "styled-components"
   ],
   "author": "Beanloop AB",
   "license": "Apache-2.0",
